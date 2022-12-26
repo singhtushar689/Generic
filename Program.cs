@@ -4,24 +4,16 @@ namespace Generic
 {
     public class Program
     {
-        public static void FindMaximum<T>(T[] inputArray)
+       
+        public static void Main(string[] args)
         {
-            foreach(var element in inputArray)
-            {
-                Console.WriteLine(element);
-            }
-
-        }
-       public static void Main(string[] args) 
-       {
-            Console.WriteLine("Hello World!");
-            int[] intArray = { 3, 7, 2, 9, 8, 6, 1, 5, 4 };
-            char[] charArray = { 'a', 'b', 'd', 'e', 'f' };
-            double[] doubleArray = { 8.6, 9.7, 5.8, 2.6, 3.9 };
-
-            FindMaximum<int>(intArray);
-            FindMaximum<char>(charArray);
-            FindMaximum<double>(doubleArray);
+            FIndMax max= new FIndMax();
+            
+            int firstNumber = 56;
+            int secondNumber = 77;
+            int thirdNumber = 98;
+            int result = max.FindMaxInteger(firstNumber, secondNumber, thirdNumber);
+            Console.WriteLine(result);
         }
     }
 }
